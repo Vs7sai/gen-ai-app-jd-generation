@@ -1,0 +1,112 @@
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+}
+
+.box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 900px;
+
+}
+
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+}
+
+
+textarea {
+  width: 700px;
+  height: 100px; 
+  padding: 10px;
+  padding-left: 190px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  resize: none;
+  transition: border 0.3s ease;
+}
+
+textarea:focus {
+  border: 2px solid #007bff;
+}
+
+/* Output Box - Fixed Size & Scrollable */
+.output-box {
+  width: 880px;
+  height: 150px;  
+  padding: 12px;
+  font-size: 16px;
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  overflow-y: auto; 
+  white-space: pre-wrap; 
+  word-break: break-word;
+}
+
+/* Placeholder Text */
+.text-placeholder {
+  color: #999;
+}
+
+/* Loading Text */
+.loading-text {
+  color: #007bff;
+  font-style: italic;
+}
+
+/* Error Message */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Button */
+button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #005ecb;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
