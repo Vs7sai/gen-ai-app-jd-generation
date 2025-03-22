@@ -7,7 +7,7 @@ import re
 
 app = FastAPI()
 
-# Enable CORS
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],  
@@ -20,7 +20,7 @@ app.add_middleware(
 API_KEY = ""
 client = Groq(api_key=API_KEY)
 
-# Request model
+
 class GenerateRequest(BaseModel):
     input: str
 
@@ -29,12 +29,11 @@ async def generate_text(request: GenerateRequest):
     try:
         user_input = request.input.strip()
 
-        # Check if input contains skills, experience, or job title
         pattern = r"(skills|experience|position|job|role|requirements)"
         if not re.search(pattern, user_input, re.IGNORECASE):
             return JSONResponse(status_code=200, content={"response": "I am a JD generation AI only."})
 
-        # Send valid input to AI
+
         prompt = f"""
         You are an AI specialized in generating job descriptions. Your task is to generate a job description based on the given inputs.
         The user will provide skills, experience, and a job title.
